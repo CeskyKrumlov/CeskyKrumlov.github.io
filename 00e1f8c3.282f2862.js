@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{58:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"latex","name":"latex","count":1,"permalink":"/blog/tags/latex"}')}}]);
