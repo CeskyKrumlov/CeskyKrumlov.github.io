@@ -6,8 +6,8 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.62">
 <title data-react-helmet="true">单例模式 | Ban&#x27;s Java</title><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="单例模式 | Ban&#x27;s Java"><meta data-react-helmet="true" name="description" content="单例模式 Singleton"><meta data-react-helmet="true" property="og:description" content="单例模式 Singleton"><meta data-react-helmet="true" property="og:url" content="http://ceskykrumlov.gitee.io/docs/datastructure/designPattern/6.singleton"><link data-react-helmet="true" rel="shortcut icon" href="/img/avatar.jpg"><link data-react-helmet="true" rel="canonical" href="http://ceskykrumlov.gitee.io/docs/datastructure/designPattern/6.singleton"><link rel="stylesheet" href="/styles.f2fdc7cb.css">
 <link rel="preload" href="/styles.df033e01.js" as="script">
-<link rel="preload" href="/runtime~main.d264d02b.js" as="script">
-<link rel="preload" href="/main.75365486.js" as="script">
+<link rel="preload" href="/runtime~main.601dcf6b.js" as="script">
+<link rel="preload" href="/main.220b908b.js" as="script">
 <link rel="preload" href="/1.3428300c.js" as="script">
 <link rel="preload" href="/2.1c1b803d.js" as="script">
 <link rel="preload" href="/512.2243ebc4.js" as="script">
@@ -42,8 +42,8 @@
 保证一个类有且仅有一个实例；提供对某个对象的全局访问点（在程序的任意地方，通过类的静态方法得到对象引用）</li><li>缺点
 只考虑了对象创建的管理，没有考虑对象销毁的管理，也不支持对象序列化</li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/datastructure/designPattern/5.prototype"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« 原型模式</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/datastructure/designPattern/7.adapterPattern"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">适配器模式 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#单例模式-singleton" class="table-of-contents__link">单例模式 Singleton</a></li><li><a href="#源发问题" class="table-of-contents__link">源发问题</a></li><li><a href="#解决方案" class="table-of-contents__link">解决方案</a><ul><li><a href="#饿汉式" class="table-of-contents__link">饿汉式</a></li><li><a href="#懒汉式" class="table-of-contents__link">懒汉式</a></li><li><a href="#dcl-懒汉式" class="table-of-contents__link">DCL 懒汉式</a></li><li><a href="#静态内部类实现" class="table-of-contents__link">静态内部类实现</a></li><li><a href="#反射创建实例破坏单例" class="table-of-contents__link">反射创建实例破坏单例</a></li><li><a href="#多次用反射创建多个对象破坏单例" class="table-of-contents__link">多次用反射创建多个对象破坏单例</a></li><li><a href="#通过枚举保证单例" class="table-of-contents__link">通过枚举保证单例</a></li></ul></li><li><a href="#uml类图" class="table-of-contents__link">UML类图</a></li><li><a href="#代码" class="table-of-contents__link">代码</a></li><li><a href="#优缺点" class="table-of-contents__link">优缺点</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2021 Ban ShaoXiong From ChangAn University. Built with Docusaurus 2.</div></div></div></footer></div>
 <script src="/styles.df033e01.js"></script>
-<script src="/runtime~main.d264d02b.js"></script>
-<script src="/main.75365486.js"></script>
+<script src="/runtime~main.601dcf6b.js"></script>
+<script src="/main.220b908b.js"></script>
 <script src="/1.3428300c.js"></script>
 <script src="/2.1c1b803d.js"></script>
 <script src="/512.2243ebc4.js"></script>
