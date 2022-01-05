@@ -6,8 +6,8 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.62">
 <title data-react-helmet="true">前言 | Ban&#x27;s Java</title><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="前言 | Ban&#x27;s Java"><meta data-react-helmet="true" name="description" content="前言"><meta data-react-helmet="true" property="og:description" content="前言"><meta data-react-helmet="true" property="og:url" content="http://ceskykrumlov.gitee.io/docs/docs/jvm/1.jvm"><link data-react-helmet="true" rel="shortcut icon" href="/img/avatar.jpg"><link data-react-helmet="true" rel="canonical" href="http://ceskykrumlov.gitee.io/docs/docs/jvm/1.jvm"><link rel="stylesheet" href="/styles.f2fdc7cb.css">
 <link rel="preload" href="/styles.c58146e3.js" as="script">
-<link rel="preload" href="/runtime~main.47ef6664.js" as="script">
-<link rel="preload" href="/main.9a9f44f6.js" as="script">
+<link rel="preload" href="/runtime~main.66a1c0f1.js" as="script">
+<link rel="preload" href="/main.7723c161.js" as="script">
 <link rel="preload" href="/1.3abb7365.js" as="script">
 <link rel="preload" href="/2.e11f32b4.js" as="script">
 <link rel="preload" href="/513.bac54f87.js" as="script">
@@ -23,8 +23,8 @@
 每种操作系统的解释器是不同的，但是基于不同解释器实现的JVM是相同的，<strong>这是Java跨平台的原因</strong></p></li><li><p>进入Java <strong>运行时数据区</strong>
 <strong>由于运行时在类加载器之后，因此Runtime Exception不可捕获</strong></p></li><li><p><strong>线程共享区域</strong>：</p><ul><li>方法区 Method Area —— 里面有运行时常量池</li><li>堆 JVM Heap <strong>（产生垃圾的主要区域）</strong> 新生代、老年代等</li></ul><p><strong>线程私有区域：（一定不会产生垃圾）</strong> </p><ul><li>本地方法栈 Native Method Stack</li><li>栈 JVM Stack，里面是栈帧Stack Frame</li><li>程序计数器</li></ul></li><li><p>执行引擎</p><ul><li>Java-In-Time Complier Java即时编译器，将Java字节码编译为机器码</li><li>GC：垃圾回收器</li></ul></li><li><p>JNI：Java Native Interface Java本地方法接口调用本地方法库 Native Method Libraries实现与操作系统交互</p></li></ol><p><img alt="image-20200615220111373" src="/assets/images/2-93936c5fc62b1276324215f18355ebc3.png"></p><blockquote><p><strong>JVM调优绝大多数集中在JVM Heap堆</strong></p></blockquote></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/javase/9.optionalClass"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Optional类</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/jvm/2.0.classFile"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Class 文件结构 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#前言" class="table-of-contents__link">前言</a></li><li><a href="#jvm的位置" class="table-of-contents__link">JVM的位置</a></li><li><a href="#jvm体系结构图" class="table-of-contents__link">JVM体系结构图</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2022 Ban ShaoXiong From ChangAn University. Built with Docusaurus 2.</div></div></div></footer></div>
 <script src="/styles.c58146e3.js"></script>
-<script src="/runtime~main.47ef6664.js"></script>
-<script src="/main.9a9f44f6.js"></script>
+<script src="/runtime~main.66a1c0f1.js"></script>
+<script src="/main.7723c161.js"></script>
 <script src="/1.3abb7365.js"></script>
 <script src="/2.e11f32b4.js"></script>
 <script src="/513.bac54f87.js"></script>

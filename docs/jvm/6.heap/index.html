@@ -6,8 +6,8 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.62">
 <title data-react-helmet="true">堆(Heap) | Ban&#x27;s Java</title><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="堆(Heap) | Ban&#x27;s Java"><meta data-react-helmet="true" name="description" content="三种JVM"><meta data-react-helmet="true" property="og:description" content="三种JVM"><meta data-react-helmet="true" property="og:url" content="http://ceskykrumlov.gitee.io/docs/docs/jvm/6.heap"><link data-react-helmet="true" rel="shortcut icon" href="/img/avatar.jpg"><link data-react-helmet="true" rel="canonical" href="http://ceskykrumlov.gitee.io/docs/docs/jvm/6.heap"><link rel="stylesheet" href="/styles.f2fdc7cb.css">
 <link rel="preload" href="/styles.c58146e3.js" as="script">
-<link rel="preload" href="/runtime~main.47ef6664.js" as="script">
-<link rel="preload" href="/main.9a9f44f6.js" as="script">
+<link rel="preload" href="/runtime~main.66a1c0f1.js" as="script">
+<link rel="preload" href="/main.7723c161.js" as="script">
 <link rel="preload" href="/1.3abb7365.js" as="script">
 <link rel="preload" href="/2.e11f32b4.js" as="script">
 <link rel="preload" href="/513.bac54f87.js" as="script">
@@ -24,8 +24,8 @@
 <code>-XX:+CMSIncrementalMode</code>:设置为增量模式。适用于单CPU情况。</p><p><code>-XX:ParallelGCThreads=n</code>:设置并发收集器年轻代收集方式为并行收集时，使用的CPU数。并行收集线程数</p></li></ul></blockquote><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="例题："></a>例题：<a aria-hidden="true" tabindex="-1" class="hash-link" href="#例题：" title="Direct link to heading">#</a></h2><blockquote><p><strong>-Xms1G -Xmx2G -Xmn500M -XX:MaxPermSize=64M -XX:+UseConcMarkSweepGC -XX:SurvivorRatio=3,
 请问eden区最终分配的大小是多少？</strong></p></blockquote><p><code>-Xms1G</code>  设置Java堆最小值为1G  </p><p><code>-Xmx2G</code>  设置Java堆最大值为2G</p><p><code>-Xmn500M</code>  设置新生代大小为500M（一个Eden区，两个Survivor区）</p><p><code>-XX:MaxPermSize=64M</code>  设置永久代大小为64M</p><p><code>-XX:+UseConcMarkSweepGC</code>   设置使用CMS收集器</p><p><code>-XX:SurvivorRatio=3</code>  设置Eden区与Survivor区大小的比例</p><p>本题看新生代大小，新生代为500M，三个区比例默认为8:1:1，现在设置为3：1：1，很容易计算出Eden大小为300M</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/jvm/5.stack"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« 栈(Stack)</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/jvm/7.gc"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">GC »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#三种jvm" class="table-of-contents__link">三种JVM</a></li><li><a href="#堆heap" class="table-of-contents__link">堆(Heap)</a><ul><li><a href="#新生代eden、survivorto、survivorfrom" class="table-of-contents__link">新生代——Eden、SurvivorTo、SurvivorFrom</a></li><li><a href="#老年代" class="table-of-contents__link">老年代</a></li><li><a href="#空间分配担保机制" class="table-of-contents__link">空间分配担保机制</a></li><li><a href="#永久代、元空间jdk18" class="table-of-contents__link">永久代、元空间(JDK1.8)</a></li><li><a href="#对于方法区的实现，为什么从永久代更换到元空间？" class="table-of-contents__link">对于方法区的实现，为什么从永久代更换到元空间？</a></li></ul></li><li><a href="#对象结构图" class="table-of-contents__link">对象结构图</a></li><li><a href="#jvm参数设置" class="table-of-contents__link">JVM参数设置</a><ul><li><a href="#例题：" class="table-of-contents__link">例题：</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2022 Ban ShaoXiong From ChangAn University. Built with Docusaurus 2.</div></div></div></footer></div>
 <script src="/styles.c58146e3.js"></script>
-<script src="/runtime~main.47ef6664.js"></script>
-<script src="/main.9a9f44f6.js"></script>
+<script src="/runtime~main.66a1c0f1.js"></script>
+<script src="/main.7723c161.js"></script>
 <script src="/1.3abb7365.js"></script>
 <script src="/2.e11f32b4.js"></script>
 <script src="/513.bac54f87.js"></script>
