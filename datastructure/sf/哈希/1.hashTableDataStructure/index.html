@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.62">
 <title data-react-helmet="true">哈希表 | Ban&#x27;s Java</title><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="哈希表 | Ban&#x27;s Java"><meta data-react-helmet="true" name="description" content="哈希表"><meta data-react-helmet="true" property="og:description" content="哈希表"><meta data-react-helmet="true" property="og:url" content="http://ceskykrumlov.gitee.io/docs/datastructure/sf/哈希/1.hashTableDataStructure"><link data-react-helmet="true" rel="shortcut icon" href="/img/avatar.jpg"><link data-react-helmet="true" rel="canonical" href="http://ceskykrumlov.gitee.io/docs/datastructure/sf/哈希/1.hashTableDataStructure"><link rel="stylesheet" href="/styles.f2fdc7cb.css">
-<link rel="preload" href="/styles.c58146e3.js" as="script">
-<link rel="preload" href="/runtime~main.66a1c0f1.js" as="script">
-<link rel="preload" href="/main.7723c161.js" as="script">
-<link rel="preload" href="/1.3abb7365.js" as="script">
-<link rel="preload" href="/2.e11f32b4.js" as="script">
-<link rel="preload" href="/513.bac54f87.js" as="script">
-<link rel="preload" href="/514.e090b10c.js" as="script">
-<link rel="preload" href="/a7bc3326.14671b9b.js" as="script">
-<link rel="preload" href="/17896441.7bcb67c5.js" as="script">
-<link rel="preload" href="/fba087e5.14994e8d.js" as="script">
+<link rel="preload" href="/styles.aa4ad18c.js" as="script">
+<link rel="preload" href="/runtime~main.08634eed.js" as="script">
+<link rel="preload" href="/main.4775f0d4.js" as="script">
+<link rel="preload" href="/1.47e5dab5.js" as="script">
+<link rel="preload" href="/2.769d4a58.js" as="script">
+<link rel="preload" href="/514.caf1419b.js" as="script">
+<link rel="preload" href="/515.040ba0fe.js" as="script">
+<link rel="preload" href="/a7bc3326.dbd37dab.js" as="script">
+<link rel="preload" href="/17896441.38b15272.js" as="script">
+<link rel="preload" href="/fba087e5.20abd0bb.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -22,15 +22,15 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">int</span><span class="token plain"> len </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> str</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token function" style="color:rgb(130, 170, 255)">length</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">int</span><span class="token plain"> hashCode </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> </span><span class="token number" style="color:rgb(247, 140, 108)">0</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">for</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token keyword" style="font-style:italic">int</span><span class="token plain"> i </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> </span><span class="token number" style="color:rgb(247, 140, 108)">0</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"> i </span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token plain"> len</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"> i</span><span class="token operator" style="color:rgb(137, 221, 255)">++</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        </span><span class="token keyword" style="font-style:italic">char</span><span class="token plain"> c </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> str</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token function" style="color:rgb(130, 170, 255)">charAt</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">i</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        hashCode </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> hashCode </span><span class="token operator" style="color:rgb(137, 221, 255)">*</span><span class="token plain"> </span><span class="token number" style="color:rgb(247, 140, 108)">31</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">+</span><span class="token plain"> c</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token class-name" style="color:rgb(255, 203, 107)">System</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">out</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token function" style="color:rgb(130, 170, 255)">println</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token string" style="color:rgb(195, 232, 141)">&quot;hashCode = &quot;</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">+</span><span class="token plain"> hashCode</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/datastructure/sf/映射/1.map"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Map</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/datastructure/sf/布隆过滤器/1.bloomFilter"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">布隆过滤器 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#哈希表" class="table-of-contents__link">哈希表</a></li><li><a href="#哈希冲突-hash-collision" class="table-of-contents__link">哈希冲突 Hash Collision</a><ul><li><a href="#解决哈希冲突的常见方法" class="table-of-contents__link">解决哈希冲突的常见方法</a><ul><li><a href="#开放定址法-open-addressing" class="table-of-contents__link">开放定址法 (Open Addressing)</a></li><li><a href="#再哈希法-re-hashing" class="table-of-contents__link">再哈希法 (Re-Hashing)</a></li><li><a href="#链地址法-separate-chaining" class="table-of-contents__link">链地址法 (Separate Chaining)</a></li></ul></li></ul></li><li><a href="#哈希函数" class="table-of-contents__link">哈希函数</a><ul><li><a href="#如何生成哈希值" class="table-of-contents__link">如何生成哈希值</a></li><li><a href="#整数-key" class="table-of-contents__link">整数 Key</a></li><li><a href="#浮点数-key" class="table-of-contents__link">浮点数 Key</a></li><li><a href="#long-key" class="table-of-contents__link">Long Key</a></li><li><a href="#字符串哈希" class="table-of-contents__link">字符串哈希</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2022 Ban ShaoXiong From ChangAn University. Built with Docusaurus 2.</div></div></div></footer></div>
-<script src="/styles.c58146e3.js"></script>
-<script src="/runtime~main.66a1c0f1.js"></script>
-<script src="/main.7723c161.js"></script>
-<script src="/1.3abb7365.js"></script>
-<script src="/2.e11f32b4.js"></script>
-<script src="/513.bac54f87.js"></script>
-<script src="/514.e090b10c.js"></script>
-<script src="/a7bc3326.14671b9b.js"></script>
-<script src="/17896441.7bcb67c5.js"></script>
-<script src="/fba087e5.14994e8d.js"></script>
+<script src="/styles.aa4ad18c.js"></script>
+<script src="/runtime~main.08634eed.js"></script>
+<script src="/main.4775f0d4.js"></script>
+<script src="/1.47e5dab5.js"></script>
+<script src="/2.769d4a58.js"></script>
+<script src="/514.caf1419b.js"></script>
+<script src="/515.040ba0fe.js"></script>
+<script src="/a7bc3326.dbd37dab.js"></script>
+<script src="/17896441.38b15272.js"></script>
+<script src="/fba087e5.20abd0bb.js"></script>
 </body>
 </html>
